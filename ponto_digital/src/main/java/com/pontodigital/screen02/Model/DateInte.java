@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document (
         value = "data_year_month"
 )
-public class DateYear {
+public class DateInte {
 
     @Id
     private String id;

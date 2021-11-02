@@ -3,9 +3,9 @@
 *.idea
 *test
 *target
-*ponto_digital.iml
 # Log file
 *.log
+*ponto_digital.iml
 
 # BlueJ files
 *.ctxt

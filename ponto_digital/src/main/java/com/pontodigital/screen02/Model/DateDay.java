@@ -1,18 +1,15 @@
 package com.pontodigital.screen02.Model;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document (
-        value = "date_day"
-)
+import java.util.Map;
+
 public class DateDay {
 
     @Id
     private String id;
-    @Field("days_timestamp")
-    private Object dateTimestamp;
+    private DateTimestamp dateTimestamp;
     @Field("date_year_month")
     private String dateMonthYear;
 
@@ -24,11 +21,11 @@ public class DateDay {
         this.id = id;
     }
 
-    public Object getDateTimestamp() {
+    public DateTimestamp getDateTimestamp() {
         return dateTimestamp;
     }
 
-    public void setDateTimestamp(Object dateTimestamp) {
+    public void setDateTimestamp(DateTimestamp dateTimestamp) {
         this.dateTimestamp = dateTimestamp;
     }
 

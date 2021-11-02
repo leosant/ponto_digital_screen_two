@@ -8,28 +8,45 @@
     <artifactId>ponto_digital</artifactId>
     <version>1.0.0</version>
 
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <properties>
-        <java.version>1.8</java.version>
         <spring.version>2.5.5</spring.version>
+        <project_mongo.version>1.0.0</project_mongo.version>
+        <project_log.version>v1.0.0</project_log.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.leosant</groupId>
+            <artifactId>com.github.leosant.mongoConfig</artifactId>
+            <version>${project_mongo.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.leosant</groupId>
+            <artifactId>Lib_logs</artifactId>
+            <version>${project_log.version}</version>
+        </dependency>
+
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <build>
         <pluginManagement>
             <plugins>
