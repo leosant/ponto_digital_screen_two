@@ -7,12 +7,12 @@
     <groupId>com.pontodigital.screen02</groupId>
     <artifactId>ponto_digital</artifactId>
     <version>1.0.0</version>
-
     <packaging>pom</packaging>
 
     <properties>
+        <java.version>1.8</java.version>
         <spring.version>2.5.5</spring.version>
-        <project_mongo.version>1.0.0</project_mongo.version>
+        <project_mongo.version>1.0.4</project_mongo.version>
         <project_log.version>v1.0.0</project_log.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -28,7 +28,7 @@
 
         <dependency>
             <groupId>com.github.leosant</groupId>
-            <artifactId>com.github.leosant.mongoConfig</artifactId>
+            <artifactId>Libs_MongoConfig</artifactId>
             <version>${project_mongo.version}</version>
         </dependency>
 

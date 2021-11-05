@@ -1,15 +1,21 @@
 package com.pontodigital.screen02.Model;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import org.bson.Document;
+import org.bson.json.JsonObject;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.print.Doc;
+import java.util.List;
 import java.util.Map;
 
 public class DateDay {
 
     @Id
     private String id;
-    private DateTimestamp dateTimestamp;
+    @Field("days_timestamp")
+    private List<Document> dateTimestamp;
     @Field("date_year_month")
     private String dateMonthYear;
 
@@ -21,11 +27,11 @@ public class DateDay {
         this.id = id;
     }
 
-    public DateTimestamp getDateTimestamp() {
+    public List<Document> getDateTimestamp() {
         return dateTimestamp;
     }
 
-    public void setDateTimestamp(DateTimestamp dateTimestamp) {
+    public void setDateTimestamp(List<Document> dateTimestamp) {
         this.dateTimestamp = dateTimestamp;
     }
 

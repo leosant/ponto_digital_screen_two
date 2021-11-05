@@ -1,17 +1,17 @@
 package com.pontodigital.screen02.Model;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class DateTimestamp {
 
-    private Map<Object, Set<Integer>> day;
+    private Map<Object, HashMap<Object, Integer>>day;
 
-    public Map<Object, Set<Integer>> getDay() {
+    public Map<Object, HashMap<Object, Integer>> getDay() {
         return day;
     }
 
-    public void setDay(Map<Object, Set<Integer>> day) {
+    public void setDay(Map<Object, HashMap<Object, Integer>> day) {
         this.day = day;
     }
 }

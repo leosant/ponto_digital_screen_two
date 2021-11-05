@@ -1,9 +1,7 @@
 package com.pontodigital.screen02.controller;
 
 import com.pontodigital.screen02.Model.DateDay;
-import com.pontodigital.screen02.Model.DateTimestamp;
 import com.pontodigital.screen02.repository.MongoRepositories;
-import jdk.net.SocketFlow;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +22,7 @@ public class PagesDot {
     MongoRepositories mongoRepositories;
 
     @GetMapping
-    public ResponseEntity<List<Document>> getTest() {
+    public ResponseEntity<List<DateDay>> getTest() {
         try {
             logger.info("initial application");
             List<Document> dates = mongoRepositories.dateMongo.findAll(Document.class, "date_year_month");
@@ -33,7 +31,7 @@ public class PagesDot {
             Query query2 = new Query(Criteria
                     .where("_id").is(dateDays.getString("january")));
             System.out.println("month_ref: "+dateDays);
-            List<Document> day = mongoRepositories.dateMongo.find(query2, Document.class, "date_day");
+            List<DateDay> day = mongoRepositories.dateMongo.find(query2, DateDay.class, "date_day");
             System.out.println("dateDay: "+day);
 
             Query query = new Query(Criteria
