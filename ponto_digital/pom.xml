@@ -7,29 +7,66 @@
     <groupId>com.pontodigital.screen02</groupId>
     <artifactId>ponto_digital</artifactId>
     <version>1.0.0</version>
-
     <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
         <spring.version>2.5.5</spring.version>
+        <org.json.version>20210307</org.json.version>
+        <project_mongo.version>1.0.4</project_mongo.version>
+        <project_class.version>1.2.1</project_class.version>
+        <project_log.version>v1.0.0</project_log.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${org.json.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xtech.commons</groupId>
+            <artifactId>xtech.commons</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.leosant</groupId>
+            <artifactId>Libs_MongoConfig</artifactId>
+            <version>${project_mongo.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.pontodigital</groupId>
+            <artifactId>Lib_Class_Digital</artifactId>
+            <version>${project_class.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.leosant</groupId>
+            <artifactId>Lib_logs</artifactId>
+            <version>${project_log.version}</version>
+        </dependency>
+
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -39,6 +76,17 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
