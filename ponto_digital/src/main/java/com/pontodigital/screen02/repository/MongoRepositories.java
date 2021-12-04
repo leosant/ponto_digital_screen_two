@@ -1,6 +1,7 @@
 package com.pontodigital.screen02.repository;
 
 import com.github.leosant.mongoConfig.MongoConfig;
+import com.xtech.commons.config.Env;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +11,8 @@ public class MongoRepositories extends MongoConfig {
     public MongoTemplate dateMongo = null;
 
     public MongoRepositories() {
-        mongoClientCluster("admin:admin@pontodigital.3ysb3.mongodb.net/pontodigital?retryWrites=true&w=majority", "pontodigital");
+        String connectioEnv = Env.getEnv("db.key");
+        mongoClientCluster(connectioEnv, "pontodigital");
         dateMongo = mongoTemplate();
     }
 

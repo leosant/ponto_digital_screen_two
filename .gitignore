@@ -1,7 +1,6 @@
 # Compiled class file
 *.class
 *.idea
-*test
 *target
 # Log file
 *.log
@@ -24,3 +23,4 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/ponto_digital/src/test/java/Script/ScriptCipher.java
